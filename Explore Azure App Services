@@ -1,0 +1,97 @@
+Azure App Service 
+
+ 
+
+Azure app service is an http based web hosting platform that can host REST API, Web backend, and mobile back-end. It can easily work with window and Linux based environments. 
+
+It has built in auto scaling support 
+
+Depending upon the usage you can scale-up or scale-down the resource that is hosting your services.  
+
+Resources include the number of cores or the amount of RAM available. Scaling out/in is the ability to increase, or decrease, the number of machine instances that are running your web app. 
+
+CI/CD support 
+
+Azure portal provides out of box support to CI/CD with azure DevOps services, Github, Bitbucket, FTP or a local Git Repo.  
+
+Deployment Slots 
+
+P02, UAT, QA, PRD (working environment) 
+
+Limitations 
+
+App Service on linux isn’t supported on Shared Pricing tier. 
+
+Azure App Service Plans 
+
+In App Service, an app always runs in an App Service Plan. 
+
+An App Service plan defines a set of compute resources for a web app to run. One or more apps can run on same app service plan. 
+
+App service plan defines 
+
+Operating system (window, Linux) 
+
+Region  
+
+Number of VM instances 
+
+Size of VM instance 
+
+Pricing tier (free, shared, basic, standard, premium, ..) 
+
+The pricing tier of an App Service plan determines what App Service features you get and how much you pay for the plan. There are a few categories of pricing tiers: 
+
+Shared compute: Free and Shared, the two base tiers, runs an app on the same Azure VM as other App Service apps, including apps of other customers. These tiers allocate CPU quotas to each app that runs on the shared resources, and the resources can't scale out. 
+
+Dedicated compute: The Basic, Standard, Premium, PremiumV2, and PremiumV3 tiers run apps on dedicated Azure VMs. Only apps in the same App Service plan share the same compute resources. The higher the tier, the more VM instances are available to you for scale-out. 
+
+Isolated: The Isolated and IsolatedV2 tiers run dedicated Azure VMs on dedicated Azure Virtual Networks. It provides network isolation on top of compute isolation to your apps. It provides the maximum scale-out capabilities. 
+
+Your App Service plan can be scaled up and down at any time. It's as simple as changing the pricing tier of the plan. If your app is in the same App Service plan with other apps, you may want to improve the app's performance by isolating the compute resources. You can do it by moving the app into a separate App Service plan. 
+
+Continuous Deployment 
+
+CD is a process used to push out new features and bug fixes ina fast and repetitive pattern with minimal effect on end user. 
+
+Azure support CD directly from 
+
+Azure DevOps 
+
+GitHub 
+
+Bitbucket 
+
+Authentication and Authorization in App Service 
+
+Azure provides built-in authentication and authorization support, so you can sign in users and access data by writing minimal code. 
+
+ 
+
+App Service Networking features 
+
+By defaut, apps hosted are accessible directly through the internet and can reach only internet-hosted endpoints. 
+
+ 
+
+ 
+
+Azure CLI Commands 
+
+Az group list: The az group list command in the Azure Command-Line Interface (CLI) is used to list all resource groups in a subscription. 
+
+--query: used to only get selected item from resource group object. 
+
+i.e. az group list –query “[].{id:name}” Only get ID from all resource group.  
+
+"[].{id:name}": This JMESPath query expression specifies the transformation to be applied to the output. Let's break it down: 
+
+[]: This indicates that we are working with an array. 
+
+{id:name}: This is an object projection. It creates a new object for each item in the array with a property named "id" that contains the value of the "name" property from the original object. 
+
+az webapp up -g $resourceGroup -n $appName –html 
+
+The az webapp up command in the Azure Command-Line Interface (CLI) is used to create and deploy a basic web application to Azure App Service. 
+
+ 
