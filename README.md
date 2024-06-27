@@ -1,5 +1,7 @@
 # Azure AZ-204 Exam Study Notes
 
+[Certificate of Completion](https://learn.microsoft.com/en-us/users/harshilpatel-1280/credentials/certification/azure-developer?tab=credentials-tab)
+
 ## Serverless Computing
 
 Serverless computing, or Function as a Service (FAAS), is a microservice architecture run on the cloud. Key features include:
