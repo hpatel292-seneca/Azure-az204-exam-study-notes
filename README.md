@@ -85,6 +85,8 @@ Azure App Service supports CD from:
 
 Azure App Service provides built-in support for authentication and authorization, minimizing custom code requirements.
 
+### For more detailed notes, read word document in this repo.
+
 ## Conclusion
 
 These notes cover essential topics for the AZ-204 exam, focusing on serverless computing, Azure Functions, Azure Storage, Durable Functions, Azure App Service, and continuous deployment practices.
